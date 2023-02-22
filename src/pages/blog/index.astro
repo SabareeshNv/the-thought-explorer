@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import { getCollection } from "astro:content";
+import { formatBlogPosts } from "@utils/helpers";
+
+const posts = await getCollection("blog");
+const formattedPosts = formatBlogPosts(posts);
+
+const title = "All Blog Posts";
+const description = "This page contains all our blog posts";
+---
+
+<BaseLayout title={title} description={description}>
+    <main class="layout grid gap-8 card-container">
+        <!-- md:grid-cols-2 -->
+        {formattedPosts.map((post) => <BlogCard post={post} />)}
+    </main>
+</BaseLayout>

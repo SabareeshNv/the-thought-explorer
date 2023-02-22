@@ -1,0 +1,24 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import FeaturedBlogCard from "@components/FeaturedBlogCard.astro";
+import { formatBlogPosts } from "@utils/helpers";
+import { getCollection } from "astro:content";
+import { SITE_TITLE, SITE_DESCRIPTION } from "src/consts";
+
+const posts = await getCollection("blog");
+const formattedPosts = formatBlogPosts(posts);
+
+const title = SITE_TITLE;
+const description = SITE_DESCRIPTION;
+---
+
+<BaseLayout title={title} description={description}>
+	<main class="layout">
+		{formattedPosts.map((post) => <FeaturedBlogCard post={post} />)[0]}
+
+		<div class="grid gap-8 mt-8 card-container">
+			{formattedPosts.slice(1).map((post) => <BlogCard post={post} />)}
+		</div>
+	</main>
+</BaseLayout>

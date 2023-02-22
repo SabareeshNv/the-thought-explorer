@@ -1,0 +1,42 @@
+---
+const nav = [
+    { text: "Home", link: "/" },
+    { text: "Blog", link: "/blog" },
+    { text: "About", link: "/about" },
+    { text: "Contact", link: "/contact" },
+];
+---
+
+<header class="py-4 shadow mb-8">
+    <div class="layout flex flex-wrap justify-between items-center">
+        <a href="/">
+            <span class="font-heading font-bold text-2xl"
+                >The Thought Explorer<em class="text-orange-700 text-3xl">.</em
+                ></span
+            ></a
+        >
+        <div id="toggle" class="md:hidden cursor-pointer text-xl">&#9776;</div>
+        <nav id="nav" class="hidden md:flex w-full md:w-auto">
+            <ul class="md:flex md:gap-8">
+                {
+                    nav.map((item) => (
+                        <li class="h-full">
+                            <a
+                                href={item.link}
+                                class="block font-semibold py-3 md:py-0 text-lg  hover:text-gray-900 focus:text-gray-800"
+                            >
+                                {item.text}
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<script>
+    document.getElementById("toggle").addEventListener("click", () => {
+        document.getElementById("nav").classList.toggle("hidden");
+    });
+</script>

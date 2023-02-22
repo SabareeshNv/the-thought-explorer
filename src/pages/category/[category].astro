@@ -1,0 +1,46 @@
+---
+import BaseLayout from "@layouts/BaseLayout.astro";
+import BlogCard from "@components/BlogCard.astro";
+import { getCollection } from "astro:content";
+import { formatBlogPosts, slugify } from "@utils/helpers";
+
+export async function getStaticPaths() {
+    const allPosts = await getCollection("blog");
+    const formattedPosts = formatBlogPosts(allPosts);
+
+    const uniqueCategory = [
+        ...new Set(formattedPosts.map((post) => slugify(post.data.category))),
+    ];
+
+    return uniqueCategory.map((category) => {
+        const filteredPosts = formattedPosts.filter((post) =>
+            slugify(post.data.category).includes(category)
+        );
+        return {
+            params: { category },
+            props: { posts: filteredPosts },
+        };
+    });
+}
+
+const { category } = Astro.params;
+const { posts } = Astro.props;
+
+const title = `Posts categorised under ${category}`;
+const description = `Posts categorised under ${category}`;
+---
+
+<BaseLayout title={title} description={description}>
+    <div class="layout">
+        <h1 class="text-2xl">
+            View the latests posts on <em
+                class="text-orange-700 font-bold font-heading underline"
+                >{category}</em
+            >
+        </h1>
+
+        <div class="mt-8 grid gap-8 card-container">
+            {posts.map((post) => <BlogCard post={post} />)}
+        </div>
+    </div>
+</BaseLayout>

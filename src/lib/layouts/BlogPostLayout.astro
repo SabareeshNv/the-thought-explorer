@@ -1,0 +1,56 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import FormattedDate from "@components/FormattedDate.astro";
+import { slugify } from "@utils/helpers";
+import { Picture, Image } from "@astrojs/image/components";
+
+const { title, description, pubDate, updatedDate, image, category } =
+    Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+    <main class="space-y-8">
+        <section class="max-w-xl mx-auto text-center space-y-3 lg:space-y-6">
+            <span
+                class="text-md text-purple-900 font-semibold uppercase inline-block tracking-wider"
+            >
+                <a href={`/category/${slugify(category)}`}>{category}</a></span
+            >
+            <h1
+                class="font-heading font-bold leading-tight text-3xl lg:text-4xl"
+            >
+                {title}
+            </h1>
+
+            <FormattedDate date={pubDate} class="text-gray-900 text-lg block" />
+        </section>
+        <div>
+            {
+                image && (
+                    <Picture
+                        src={image.src}
+                        alt={image.alt}
+                        format="webp"
+                        widths={[200, 400, 600, 900, 1280]}
+                        aspectRatio="16:9"
+                        sizes="(max-width: 1280px) 100vw, 1280px"
+                        class="shadow-md w-full"
+                    />
+                )
+            }
+        </div>
+        <article class="layout typography mx-auto">
+            <slot />
+        </article>
+    </main>
+    <!-- <aside class="grid gap-8 md:grid-cols-4 bg-yellow-800 p-6">
+        <div>
+            <h2 class="text-2xl font-bold underline decoration-4 text-gray-800">
+                Other Posts you may like
+            </h2>
+        </div>
+        <div class="md:col-span-3 grid gap-4 card">
+            {randomPosts.map((post) => <RandomCard post={post} />)}
+        </div>
+    </aside> -->
+</BaseLayout>

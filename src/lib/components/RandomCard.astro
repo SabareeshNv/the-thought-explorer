@@ -1,0 +1,33 @@
+---
+import { Picture, Image } from "@astrojs/image/components";
+import { formatDate } from "@utils/helpers";
+
+const { post } = Astro.props;
+---
+
+<article class="space-y-4">
+    <a href={post.url}>
+        <Picture
+            src={`/assets/images/${post.frontmatter.image.src}`}
+            alt={post.frontmatter.image.alt}
+            quality={90}
+            widths={[200, 400, 600]}
+            aspectRatio="16:9"
+            sizes="(max-width: 600px) 100vw, 600px"
+            class="rounded-md shadow w-full"
+        />
+    </a>
+    <div class="space-y-2">
+        <span
+            class="inline-block text-md font-semibold text-orange-700 uppercase tracking-tight"
+        >
+            {post.frontmatter.category}
+        </span>
+        <span class="text-sm text-gray-800"
+            >&bull; {formatDate(post.frontmatter.pubDate)}</span
+        >
+        <h2 class="text-lg font-bold text-gray-800">
+            <a href={post.url}>{post.frontmatter.title}</a>
+        </h2>
+    </div>
+</article>

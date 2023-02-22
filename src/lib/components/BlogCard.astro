@@ -1,0 +1,43 @@
+---
+import { Image } from "@astrojs/image/components";
+import { slugify } from "@utils/helpers";
+import FormattedDate from "./FormattedDate.astro";
+
+const { post } = Astro.props;
+const { title, description, pubDate, category, image } = post.data;
+---
+
+<article>
+    <a href={`/blog/${post.slug}/`}>
+        <Image
+            src={image.src}
+            alt={image.alt}
+            format="webp"
+            position={"attention"}
+            width={600}
+            height={400}
+            class="rounded-md shadow"
+        />
+    </a>
+
+    <div class="py-3">
+        <div class="flex flex-wrap items-center space-x-2">
+            <span
+                class="text-sm tracking-wider font-semibold text-purple-900 uppercase"
+            >
+                <a href={`/category/${slugify(category)}`}>{category}</a></span
+            >
+
+            <div>&bull;</div>
+
+            <FormattedDate date={pubDate} class="text-md text-gray-900" />
+        </div>
+
+        <h2 class="py-4 text-2xl font-semibold font-heading">
+            <a href={`/blog/${post.slug}/`}>{title}</a>
+        </h2>
+        <div class="text-md">
+            {description}
+        </div>
+    </div>
+</article>
