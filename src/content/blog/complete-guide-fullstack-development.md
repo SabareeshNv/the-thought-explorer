@@ -2,7 +2,7 @@
 title: "The Complete Guide to Full Stack Web Development"
 description: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 pubDate: "2022-12-28"
-image: {src: "/images/photo-1593720213428-28a5b9e94613.jpeg", alt: "A picture of a coder"}
+image: {src: "/images/dev.jpg", alt: "A picture of an enfield bike"}
 category: "design"
 ---
 

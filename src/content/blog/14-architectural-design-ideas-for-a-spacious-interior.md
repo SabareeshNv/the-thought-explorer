@@ -2,7 +2,7 @@
 title: "14 Architectural Design Ideas for a Spacious Interior"
 description: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 pubDate: "2023-02-15"
-image: { src: "/images/4.jpg", alt: "A picture of a coder" }
+image: { src: "/images/arch.jpg", alt: "A picture of a coder" }
 category: "Politics"
 ---
 
