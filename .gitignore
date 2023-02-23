@@ -22,4 +22,3 @@ pnpm-debug.log*
 
 #custom ignore list of mine
 pnpm-lock.yaml
-public/
