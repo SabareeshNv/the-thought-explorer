@@ -4,8 +4,9 @@ import FormattedDate from "@components/FormattedDate.astro";
 import { slugify } from "@utils/helpers";
 import { Picture, Image } from "@astrojs/image/components";
 
-const { title, description, pubDate, updatedDate, image, category } =
-    Astro.props;
+const { title, summary, pubDate, updatedDate, image, category } = Astro.props;
+
+const description = "This is the description";
 ---
 
 <BaseLayout title={title} description={description}>

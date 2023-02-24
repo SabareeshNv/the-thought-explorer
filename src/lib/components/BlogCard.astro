@@ -4,7 +4,7 @@ import { slugify } from "@utils/helpers";
 import FormattedDate from "./FormattedDate.astro";
 
 const { post } = Astro.props;
-const { title, description, pubDate, category, image } = post.data;
+const { title, summary, pubDate, category, image } = post.data;
 ---
 
 <article>
@@ -37,7 +37,7 @@ const { title, description, pubDate, category, image } = post.data;
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="text-md">
-            {description}
+            {summary}
         </div>
     </div>
 </article>

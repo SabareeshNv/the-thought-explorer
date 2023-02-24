@@ -5,15 +5,17 @@ import { getCollection } from "astro:content";
 import { formatBlogPosts, slugify } from "@utils/helpers";
 
 export async function getStaticPaths() {
-    const allPosts = await getCollection("blog");
-    const formattedPosts = formatBlogPosts(allPosts);
+    const allBlogPosts = await getCollection("blog");
+    const formattedBlogPosts = formatBlogPosts(allBlogPosts);
 
     const uniqueCategory = [
-        ...new Set(formattedPosts.map((post) => slugify(post.data.category))),
+        ...new Set(
+            formattedBlogPosts.map((post) => slugify(post.data.category))
+        ),
     ];
 
     return uniqueCategory.map((category) => {
-        const filteredPosts = formattedPosts.filter((post) =>
+        const filteredPosts = formattedBlogPosts.filter((post) =>
             slugify(post.data.category).includes(category)
         );
         return {
