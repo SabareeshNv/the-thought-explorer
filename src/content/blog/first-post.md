@@ -1,6 +1,6 @@
 ---
 title: "First post"
-description: "Lorem ipsum dolor sit amet"
+summary: "Lorem ipsum dolor sit amet"
 pubDate: "2023-01-22"
 image: { src: "/images/6.jpg", alt: "A picture of a coder" }
 category: "Opinion"

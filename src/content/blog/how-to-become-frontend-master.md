@@ -1,6 +1,6 @@
 ---
 title: "How to become a Frontend Master"
-description: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+summary: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 pubDate: "2022-11-07"
 image: {src: "/images/photo-1667372393119-3d4c48d07fc9.jpeg", alt: "hellowwww"}
 category: "travel"

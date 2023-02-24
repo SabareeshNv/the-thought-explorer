@@ -1,6 +1,6 @@
 ---
 title: " Introduction to the Essential Data Structures & Algorithms"
-description: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
+summary: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 pubDate: "2022-11-09"
 image: {src: "/images/photo-1627163439134-7a8c47e08208.jpeg", alt: "A picture of a coder"}
 category: "design"
