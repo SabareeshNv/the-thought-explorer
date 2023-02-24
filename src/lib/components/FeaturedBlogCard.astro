@@ -1,5 +1,5 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 import FormattedDate from "./FormattedDate.astro";
 import { slugify } from "@utils/helpers";
 
@@ -10,13 +10,14 @@ const { title, summary, pubDate, category, image } = post.data;
 <article class="grid md:grid-cols-3 md:gap-8">
     <div class="md:col-span-2">
         <a href={`/blog/${post.slug}/`}>
-            <Image
+            <Picture
                 src={image.src}
                 alt={image.alt}
+                widths={[200, 400, 800, 1200]}
+                sizes="(max-width: 800px) 100vw, 1200px"
+                aspectRatio="16:9"
                 format="webp"
                 position={"attention"}
-                width={900}
-                height={500}
                 class="rounded-md shadow"
             />
         </a>
@@ -34,7 +35,9 @@ const { title, summary, pubDate, category, image } = post.data;
 
             <FormattedDate date={pubDate} class="text-md text-gray-900" />
         </div>
-        <h2 class="my-3 text-2xl font-semibold font-heading">
+        <h2
+            class="my-3 text-2xl font-bold font-heading tracking-tight leading-tight"
+        >
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="text-md">

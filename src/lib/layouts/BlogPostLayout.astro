@@ -11,7 +11,7 @@ const description = "This is the description";
 
 <BaseLayout title={title} description={description}>
     <main class="space-y-8">
-        <section class="max-w-xl mx-auto text-center space-y-3 lg:space-y-6">
+        <section class="layout text-center space-y-3 lg:space-y-6">
             <span
                 class="text-md text-purple-900 font-semibold uppercase inline-block tracking-wider"
             >
@@ -32,9 +32,9 @@ const description = "This is the description";
                         src={image.src}
                         alt={image.alt}
                         format="webp"
-                        widths={[200, 400, 600, 900, 1280]}
+                        widths={[200, 400, 800, 1280]}
+                        sizes="(max-width: 800px) 100vw, 1280px"
                         aspectRatio="16:9"
-                        sizes="(max-width: 1280px) 100vw, 1280px"
                         class="shadow-md w-full"
                     />
                 )
@@ -44,14 +44,4 @@ const description = "This is the description";
             <slot />
         </article>
     </main>
-    <!-- <aside class="grid gap-8 md:grid-cols-4 bg-yellow-800 p-6">
-        <div>
-            <h2 class="text-2xl font-bold underline decoration-4 text-gray-800">
-                Other Posts you may like
-            </h2>
-        </div>
-        <div class="md:col-span-3 grid gap-4 card">
-            {randomPosts.map((post) => <RandomCard post={post} />)}
-        </div>
-    </aside> -->
 </BaseLayout>

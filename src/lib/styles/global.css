@@ -1,3 +1,14 @@
+html,
+body {
+    height: 100%;
+}
+
+
+body>footer {
+    position: sticky;
+    top: 100vh;
+}
+
 .layout {
     max-width: 1280px;
     width: 90%;
@@ -6,25 +17,24 @@
 }
 
 .typography {
-    @apply prose md:prose-lg 2xl:prose-xl 
-    prose-headings:font-heading prose-headings:leading-tight
-    prose-img:rounded prose-img:w-full 
-    prose-li:marker:text-gray-600 
-    prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4 prose-table:rounded-md prose-table:bg-gray-100 
-    prose-blockquote:border-gray-900 prose-blockquote:bg-gray-100 prose-blockquote:px-4 prose-blockquote:py-2
-    prose-a:text-purple-800 hover:prose-a:text-purple-900 ;
+    @apply prose md:prose-lg 2xl:prose-xl prose-headings:font-heading prose-headings:leading-tight prose-li:marker:text-gray-600 prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4 prose-table:rounded-md prose-table:bg-gray-100 prose-blockquote:border-gray-900 prose-blockquote:bg-gray-100 prose-blockquote:px-4 prose-blockquote:py-2 prose-a:text-yellow-800 hover:prose-a:text-purple-900;
 }
 
-html,
-body {
-    height: 100%;
-}
 
-body>footer {
-    position: sticky;
-    top: 100vh;
-}
 
 .card-container {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+
+.full-bleed {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+@media (min-width: 768px) {
+.full-bleed {
+    width: unset;
+    margin-left: unset;
+    }
 }

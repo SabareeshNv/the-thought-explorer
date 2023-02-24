@@ -1,6 +1,6 @@
 ---
 title: "Every Next Level of Your Life Will Demand a Different You"
-summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sunt tenetur soluta repellendus eius itaque impedit ullam, laboriosam inventore, unde, quis deleniti et delectus veniam debitis cupiditate sint voluptatem cumque. Optio nemo laudantium porro, ratione rerum in veniam quaerat ea reiciendis quia mollitia nesciunt vel id exercitationem ab saepe animi sint!"
+summary: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi sunt tenetur soluta repellendus eius itaque impedit ullam, laboriosam inventore, unde"
 pubDate: "2022-11-24"
 image: {src: "/images/photo-1501747315-124a0eaca060.avif", alt: "You know who!"}
 category: "personal"

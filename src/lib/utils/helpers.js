@@ -18,10 +18,8 @@ export function formatDate(date) {
     });
 }
 
-export function formatBlogPosts(
-    posts,
-    {
-        filterOutDrafts = true,
+export function formatBlogPosts(posts,
+    { filterOutDrafts = true,
         filterOutFuturePosts = true,
         sortByDate = true,
         limit = undefined,
