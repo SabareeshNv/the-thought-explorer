@@ -1,9 +1,9 @@
 ---
-title: "First post"
+title: "Diwali Celebration in India"
 summary: "Lorem ipsum dolor sit amet"
 pubDate: "2023-01-22"
-image: { src: "/images/6.jpg", alt: "A picture of a coder" }
-category: "Opinion"
+image: { src: "/images/6.jpg", alt: "A picture of a diwali light" }
+category: "Festival"
 ---
 
 One morning, when Gregor Samsa woke from troubled dreams, he found himself *transformed* in his bed into a horrible  [vermin](http://en.wikipedia.org/wiki/Vermin "Wikipedia Vermin"). He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover **strong** it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, link waved abouthelplessly as he looked. <cite>“What's happened to me?”</cite> he thought. It wasn't a dream. His room, a proper human room although a little too small, lay peacefully between its four familiar walls.
@@ -18,41 +18,6 @@ It showed a lady fitted out with a fur hat and fur boa who sat upright, raising 
 - He has to get up early (to start another dreadful day).
 - He has a drawer and a alarm clock next to his bed.
 - His mother calls him when he gets up to late.
-
-
-<table class="data">
-  <tr>
-    <th>Writer</th>
-    <th>Nationality</th>
-    <th>Genre</th>
-    <th>Most famous book</th>
-  </tr>
-  <tr>
-    <td>Franz Kafka</td>
-    <td>Leo Tolstoy</td>
-    <td>F. Scott Fitzgerald</td>
-    <td>H.G. Wells</td>
-  </tr>
-  <tr>
-    <td>Austrian</td>
-    <td>Russia</td>
-    <td>American</td>
-    <td>British</td>
-  </tr>
-  <tr>
-    <td>Literature & Fiction, Philosophy, Short Stories</td>
-    <td>Literature & Fiction, Philosophy</td>
-    <td>Literature & Fiction, Short Stories</td>
-    <td>Science Fiction</td>
-  </tr>
-    <tr>
-    <td>The Metamorphosis</td>
-    <td>War & Piece</td>
-    <td>The Great Gatsby</td>
-    <td>War of the Worlds</td>
-  </tr>
-  </table>
-
 
 
 It was very easy to throw aside the blanket. He needed only to push himself up a little, and it fell by itself. But to continue was difficult, particularly because he was so unusually wide. He needed arms and hands to push himself upright. Instead of these, however, he had only many small limbs which were incessantly moving with very different motions and which, in addition, he was unable to control. If he wanted to bend one of them, then it was the first to extend itself, and if he finally succeeded doing with this limb what he wanted, in the meantime all the others, as if left free, moved around in an excessively painful agitation. "But I must not stay in bed uselessly," said Gregor to himself.
