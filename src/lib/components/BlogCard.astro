@@ -30,11 +30,11 @@ const { title, summary, pubDate, category, image } = post.data;
 
             <div>&bull;</div>
 
-            <FormattedDate date={pubDate} class="text-md text-gray-900" />
+            <FormattedDate date={pubDate} class="text-sm text-gray-900" />
         </div>
 
         <h2
-            class="py-4 text-2xl font-bold font-heading tracking-tight leading-tight"
+            class="py-3 text-2xl font-semibold font-heading tracking-tight leading-tight"
         >
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>

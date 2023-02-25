@@ -7,7 +7,7 @@ const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<article class="grid md:grid-cols-3 md:gap-8">
+<article class="grid md:grid-cols-3 md:gap-2 bg-[#CCE6D0]">
     <div class="md:col-span-2">
         <a href={`/blog/${post.slug}/`}>
             <Picture
@@ -18,12 +18,11 @@ const { title, summary, pubDate, category, image } = post.data;
                 aspectRatio="16:9"
                 format="webp"
                 position={"attention"}
-                class="rounded-md shadow"
             />
         </a>
     </div>
 
-    <div>
+    <div class="p-6">
         <div class="my-3 md:mt-0 md:mb-3 flex flex-wrap items-center space-x-2">
             <span
                 class="text-sm tracking-wider font-semibold text-purple-900 uppercase"
@@ -33,7 +32,7 @@ const { title, summary, pubDate, category, image } = post.data;
 
             <div>&bull;</div>
 
-            <FormattedDate date={pubDate} class="text-md text-gray-900" />
+            <FormattedDate date={pubDate} class="text-sm text-gray-900" />
         </div>
         <h2
             class="my-3 text-2xl font-bold font-heading tracking-tight leading-tight"
