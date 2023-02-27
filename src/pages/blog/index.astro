@@ -12,7 +12,7 @@ const description = "This page contains all our blog posts";
 ---
 
 <BaseLayout title={title} description={description}>
-    <main class="layout grid gap-8 card-container">
+    <main class="layout py-8 grid gap-8 card-container">
         {formattedBlogPosts.map((post) => <BlogCard post={post} />)}
     </main>
 </BaseLayout>

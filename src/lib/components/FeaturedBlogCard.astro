@@ -7,8 +7,9 @@ const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<!-- [#CCE6D0] -->
-<article class="grid md:grid-cols-3 md:gap-2 bg-accent">
+<article
+    class="grid md:grid-cols-3 lg:gap-2 bg-gray-50 shadow rounded-t md:rounded-l md:rounded-tr-none"
+>
     <div class="md:col-span-2">
         <a href={`/blog/${post.slug}/`}>
             <Picture
@@ -16,10 +17,9 @@ const { title, summary, pubDate, category, image } = post.data;
                 alt={image.alt}
                 widths={[200, 400, 800, 1200]}
                 sizes="(max-width: 800px) 100vw, 1200px"
-                aspectRatio="16:9"
+                aspectRatio="2:1"
                 format="webp"
-                position={"attention"}
-                class="h-full cover"
+                class="h-full cover rounded-t md:rounded-l md:rounded-tr-none"
             />
         </a>
     </div>
@@ -37,7 +37,7 @@ const { title, summary, pubDate, category, image } = post.data;
                 class="text-sm text-gray-900 tracking-wider font-semibold"
             />
         </div>
-        <h2 class="py-4 text-2xl font-semibold font-heading">
+        <h2 class="py-4 text-2xl font-semibold leading-snug font-heading">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="text-md">

@@ -14,7 +14,7 @@ const { title, summary, pubDate, category, image } = post.data;
             alt={image.alt}
             widths={[200, 400, 800]}
             sizes="(max-width: 800px) 100vw, 800px"
-            aspectRatio="16:9"
+            aspectRatio="2:1"
             format="webp"
             class="rounded-t"
         />
@@ -34,7 +34,7 @@ const { title, summary, pubDate, category, image } = post.data;
             />
         </div>
 
-        <h2 class="pb-4 text-2xl font-semibold font-heading">
+        <h2 class="pb-4 text-2xl font-semibold leading-snug font-heading">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="text-md">

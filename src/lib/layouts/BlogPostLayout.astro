@@ -1,18 +1,19 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import GoToTop from "@components/GoToTop.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { slugify } from "@utils/helpers";
-import { Picture, Image } from "@astrojs/image/components";
+import { Picture } from "@astrojs/image/components";
 
-const { title, summary, pubDate, updatedDate, image, category } = Astro.props;
+const { title, pubDate, updatedDate, image, category } = Astro.props;
 
 const description = "This is the description";
 ---
 
 <BaseLayout title={title} description={description}>
-    <main class="space-y-8">
+    <main class="space-y-8 py-8 relative">
         <section class="layout">
-            <div class="max-w-lg mx-auto text-center space-y-3">
+            <div class="max-w-3xl mx-auto text-center space-y-3">
                 <span
                     class="text-md text-purple-900 font-semibold uppercase tracking-wider"
                 >
@@ -25,7 +26,7 @@ const description = "This is the description";
 
                 <FormattedDate
                     date={pubDate}
-                    class="text-gray-900 text-lg block"
+                    class="text-gray-900 text-md block"
                 />
             </div>
         </section>
@@ -35,7 +36,6 @@ const description = "This is the description";
                     <Picture
                         src={image.src}
                         alt={image.alt}
-                        format="webp"
                         widths={[200, 400, 800, 1000]}
                         sizes="(max-width: 800px) 100vw, 1000px"
                         aspectRatio="16:9"
@@ -48,4 +48,6 @@ const description = "This is the description";
             <slot />
         </article>
     </main>
+
+    <GoToTop />
 </BaseLayout>

@@ -1,16 +1,18 @@
 ---
 import { Picture } from "@astrojs/image/components";
 
-const { src, alt, ...props } = Astro.props;
+const { src, alt, aspRatio = "16:9", ...props } = Astro.props;
 ---
 
-<Picture
-    src={src}
-    alt={alt}
-    widths={[200, 400, 800]}
-    sizes="(max-width: 800px) 100vw, 800px"
-    aspectRatio="16:9"
-    format="webp"
-    class="shadow rounded w-full"
-    {...props}
-/>
+<figure>
+    <Picture
+        src={src}
+        alt={alt}
+        widths={[200, 400, 800]}
+        sizes="(max-width: 800px) 100vw, 800px"
+        aspectRatio={aspRatio}
+        format="webp"
+        class="shadow rounded"
+        {...props}
+    />
+</figure>

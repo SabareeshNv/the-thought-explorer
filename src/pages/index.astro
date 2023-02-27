@@ -14,7 +14,7 @@ const description = SITE_DESCRIPTION;
 ---
 
 <BaseLayout title={title} description={description}>
-	<main class="layout">
+	<main class="layout py-8">
 		{formattedBlogPosts.map((post) => <FeaturedBlogCard post={post} />)[0]}
 
 		<div class="grid gap-8 mt-8 card-container">

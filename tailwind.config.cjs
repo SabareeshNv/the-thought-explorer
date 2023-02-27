@@ -6,12 +6,12 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+				sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
 				heading: ["Bitter", ...defaultTheme.fontFamily.serif],
 			},
 			colors: {
 				'accent': "#CCE6D0",
-				'orange': "#FF7D3C",
+				'brand-white': "#FCFAFF",
 			},
 		},
 	},
