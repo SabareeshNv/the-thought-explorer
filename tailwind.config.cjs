@@ -6,10 +6,16 @@ module.exports = {
 	theme: {
 		extend: {
 			fontFamily: {
-				sans: ["Montserrat", ...defaultTheme.fontFamily.sans],
+				sans: ["Poppins", ...defaultTheme.fontFamily.sans],
 				heading: ["Bitter", ...defaultTheme.fontFamily.serif],
+			},
+			colors: {
+				'accent': "#CCE6D0",
+				'orange': "#FF7D3C",
 			},
 		},
 	},
-	plugins: [require("@tailwindcss/typography")],
+	plugins: [
+		require("@tailwindcss/typography")
+	],
 }

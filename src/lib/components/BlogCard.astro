@@ -7,7 +7,7 @@ const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<article>
+<article class="shadow rounded">
     <a href={`/blog/${post.slug}/`}>
         <Picture
             src={image.src}
@@ -16,26 +16,25 @@ const { title, summary, pubDate, category, image } = post.data;
             sizes="(max-width: 800px) 100vw, 800px"
             aspectRatio="16:9"
             format="webp"
-            class="rounded-md shadow"
+            class="rounded-t"
         />
     </a>
 
-    <div class="py-3">
-        <div class="flex flex-wrap items-center space-x-2">
-            <span
+    <div class="p-4">
+        <div class="flex flex-wrap items-center justify-between pb-4">
+            <a
+                href={`/category/${slugify(category)}`}
                 class="text-sm tracking-wider font-semibold text-purple-900 uppercase"
-            >
-                <a href={`/category/${slugify(category)}`}>{category}</a></span
+                >{category}</a
             >
 
-            <div>&bull;</div>
-
-            <FormattedDate date={pubDate} class="text-sm text-gray-900" />
+            <FormattedDate
+                date={pubDate}
+                class="text-sm text-gray-900 tracking-wider font-semibold"
+            />
         </div>
 
-        <h2
-            class="py-3 text-2xl font-semibold font-heading tracking-tight leading-tight"
-        >
+        <h2 class="pb-4 text-2xl font-semibold font-heading">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="text-md">

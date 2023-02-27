@@ -8,7 +8,7 @@ const { title, summary, pubDate, category, image } = post.data;
 ---
 
 <!-- [#CCE6D0] -->
-<article class="grid md:grid-cols-3 md:gap-2 bg-teal-100 shadow-lg">
+<article class="grid md:grid-cols-3 md:gap-2 bg-accent">
     <div class="md:col-span-2">
         <a href={`/blog/${post.slug}/`}>
             <Picture
@@ -19,26 +19,25 @@ const { title, summary, pubDate, category, image } = post.data;
                 aspectRatio="16:9"
                 format="webp"
                 position={"attention"}
-                class="rounded-t-lg md:rounded-l-lg md:rounded-tr-none"
+                class="h-full cover"
             />
         </a>
     </div>
 
     <div class="p-6">
-        <div class="my-3 md:mt-0 md:mb-3 flex flex-wrap items-center space-x-2">
-            <span
+        <div class="flex flex-wrap items-center justify-between">
+            <a
+                href={`/category/${slugify(category)}`}
                 class="text-sm tracking-wider font-semibold text-purple-900 uppercase"
-            >
-                <a href={`/category/${slugify(category)}`}>{category}</a></span
+                >{category}</a
             >
 
-            <div>&bull;</div>
-
-            <FormattedDate date={pubDate} class="text-sm text-gray-900" />
+            <FormattedDate
+                date={pubDate}
+                class="text-sm text-gray-900 tracking-wider font-semibold"
+            />
         </div>
-        <h2
-            class="my-3 text-2xl font-bold font-heading tracking-tight leading-tight"
-        >
+        <h2 class="py-4 text-2xl font-semibold font-heading">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="text-md">
