@@ -23,7 +23,7 @@ const { title, summary, pubDate, category, image } = post.data;
         </a>
     </div>
 
-    <div class="p-6 space-y-4">
+    <div class="p-4 space-y-4">
         <div class="flex flex-wrap items-center justify-between">
             <a
                 href={`/category/${slugify(category)}`}
@@ -33,7 +33,7 @@ const { title, summary, pubDate, category, image } = post.data;
 
             <FormattedDate date={pubDate} class="text-sm tracking-wider" />
         </div>
-        <h2 class="text-xl font-medium font-heading leading-snug">
+        <h2 class="text-xl font-semibold font-heading leading-snug">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
         <div class="font-light">

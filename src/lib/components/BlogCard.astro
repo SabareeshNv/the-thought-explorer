@@ -26,11 +26,10 @@ const { title, summary, pubDate, category, image } = post.data;
                 class="text-sm tracking-wider font-semibold text-purple-900 uppercase"
                 >{category}</a
             >
-
             <FormattedDate date={pubDate} class="text-sm tracking-wider" />
         </div>
 
-        <h2 class="text-xl font-medium font-heading leading-snug">
+        <h2 class="text-xl font-semibold font-heading leading-snug">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
 
@@ -39,18 +38,3 @@ const { title, summary, pubDate, category, image } = post.data;
         </div>
     </div>
 </article>
-
-<!-- <style>
-    .card {
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        top: 0;
-        transition: all 0.1s ease-in;
-    }
-    .card:hover {
-        top: -2px;
-        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-    }
-</style> -->
