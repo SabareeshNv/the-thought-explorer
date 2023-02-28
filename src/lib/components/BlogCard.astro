@@ -7,38 +7,50 @@ const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<article class="shadow rounded">
+<article class="flex flex-col custom-shadow rounded">
     <a href={`/blog/${post.slug}/`}>
         <Picture
             src={image.src}
             alt={image.alt}
             widths={[200, 400, 800]}
             sizes="(max-width: 800px) 100vw, 800px"
-            aspectRatio="2:1"
-            format="webp"
+            aspectRatio="16:9"
             class="rounded-t"
         />
     </a>
 
-    <div class="p-4">
-        <div class="flex flex-wrap items-center justify-between pb-4">
+    <div class="p-4 space-y-4">
+        <div class="flex flex-wrap items-center justify-between">
             <a
                 href={`/category/${slugify(category)}`}
                 class="text-sm tracking-wider font-semibold text-purple-900 uppercase"
                 >{category}</a
             >
 
-            <FormattedDate
-                date={pubDate}
-                class="text-sm text-gray-900 tracking-wider font-semibold"
-            />
+            <FormattedDate date={pubDate} class="text-sm tracking-wider" />
         </div>
 
-        <h2 class="pb-4 text-2xl font-semibold leading-snug font-heading">
+        <h2 class="text-xl font-medium font-heading leading-snug">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
-        <div class="text-md">
+
+        <div class="font-light">
             {summary}
         </div>
     </div>
 </article>
+
+<!-- <style>
+    .card {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        transition: all 0.1s ease-in;
+    }
+    .card:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    }
+</style> -->

@@ -17,7 +17,7 @@ body>footer {
 }
 
 .typography {
-    @apply prose md:prose-lg 2xl:prose-xl prose-headings:font-heading prose-headings:leading-tight prose-li:marker:text-gray-600 prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4 prose-table:rounded-md prose-table:bg-gray-100 prose-blockquote:border-gray-600 prose-blockquote:bg-accent prose-blockquote:px-10 prose-blockquote:py-2;
+    @apply prose md:prose-lg 2xl:prose-xl prose-headings:font-heading prose-headings:leading-tight prose-li:marker:text-gray-600 prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4 prose-table:rounded-md prose-table:bg-gray-100 prose-blockquote:border-gray-800 prose-blockquote:px-10 prose-blockquote:py-2;
 }
 
 
@@ -37,4 +37,16 @@ body>footer {
     width: unset;
     margin-left: unset;
     }
+}
+
+.custom-shadow {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in;
+}
+
+.custom-shadow:hover {
+        top: -2px;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }

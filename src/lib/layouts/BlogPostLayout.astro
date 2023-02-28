@@ -1,6 +1,5 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import GoToTop from "@components/GoToTop.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { slugify } from "@utils/helpers";
 import { Picture } from "@astrojs/image/components";
@@ -11,43 +10,41 @@ const description = "This is the description";
 ---
 
 <BaseLayout title={title} description={description}>
-    <main class="space-y-8 py-8 relative">
+    <main class="py-8 space-y-6">
         <section class="layout">
-            <div class="max-w-3xl mx-auto text-center space-y-3">
+            <div class="max-w-3xl mx-auto text-center space-y-4">
                 <span
-                    class="text-md text-purple-900 font-semibold uppercase tracking-wider"
+                    class="text-md text-purple-900 font-medium uppercase tracking-wider"
                 >
                     <a href={`/category/${slugify(category)}`}>{category}</a
                     ></span
                 >
-                <h1 class="font-heading font-bold text-3xl lg:text-4xl">
+                <h1
+                    class="font-heading font-medium text-2xl md:text-3xl lg:text-4xl"
+                >
                     {title}
                 </h1>
 
                 <FormattedDate
                     date={pubDate}
-                    class="text-gray-900 text-md block"
+                    class="text-gray-900 font-medium tracking-wider block"
                 />
             </div>
         </section>
+
         <div>
-            {
-                image && (
-                    <Picture
-                        src={image.src}
-                        alt={image.alt}
-                        widths={[200, 400, 800, 1000]}
-                        sizes="(max-width: 800px) 100vw, 1000px"
-                        aspectRatio="16:9"
-                        class="mx-auto shadow-md rounded"
-                    />
-                )
-            }
+            <Picture
+                src={image.src}
+                alt={image.alt}
+                widths={[200, 400, 800, 1000]}
+                sizes="(max-width: 800px) 100vw, 1000px"
+                aspectRatio="16:9"
+                class="mx-auto shadow rounded"
+            />
         </div>
+
         <article class="layout typography">
             <slot />
         </article>
     </main>
-
-    <GoToTop />
 </BaseLayout>

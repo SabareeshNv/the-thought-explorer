@@ -8,7 +8,7 @@ const { title, summary, pubDate, category, image } = post.data;
 ---
 
 <article
-    class="grid md:grid-cols-3 lg:gap-2 bg-gray-50 shadow rounded-t md:rounded-l md:rounded-tr-none"
+    class="grid md:grid-cols-3 lg:gap-1 lg:bg-gray-50 shadow rounded-t md:rounded-l md:rounded-tr-none"
 >
     <div class="md:col-span-2">
         <a href={`/blog/${post.slug}/`}>
@@ -18,13 +18,12 @@ const { title, summary, pubDate, category, image } = post.data;
                 widths={[200, 400, 800, 1200]}
                 sizes="(max-width: 800px) 100vw, 1200px"
                 aspectRatio="2:1"
-                format="webp"
-                class="h-full cover rounded-t md:rounded-l md:rounded-tr-none"
+                class="h-full rounded-t md:rounded-l md:rounded-tr-none"
             />
         </a>
     </div>
 
-    <div class="p-6">
+    <div class="p-6 space-y-4">
         <div class="flex flex-wrap items-center justify-between">
             <a
                 href={`/category/${slugify(category)}`}
@@ -32,15 +31,12 @@ const { title, summary, pubDate, category, image } = post.data;
                 >{category}</a
             >
 
-            <FormattedDate
-                date={pubDate}
-                class="text-sm text-gray-900 tracking-wider font-semibold"
-            />
+            <FormattedDate date={pubDate} class="text-sm tracking-wider" />
         </div>
-        <h2 class="py-4 text-2xl font-semibold leading-snug font-heading">
+        <h2 class="text-xl font-medium font-heading leading-snug">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
-        <div class="text-md">
+        <div class="font-light">
             {summary}
         </div>
     </div>
