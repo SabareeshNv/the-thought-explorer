@@ -17,7 +17,13 @@ body>footer {
 }
 
 .typography {
-    @apply prose md:prose-lg 2xl:prose-xl prose-headings:font-heading prose-headings:leading-tight prose-li:marker:text-gray-600 prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4 prose-table:rounded-md prose-table:bg-brand-white prose-table:shadow prose-blockquote:border-accent prose-blockquote:bg-accent prose-blockquote:rounded prose-blockquote:shadow prose-blockquote:px-10 prose-blockquote:py-2;
+    @apply prose md:prose-lg 2xl:prose-xl 
+    prose-headings:leading-tight prose-headings:font-heading
+    prose-li:marker:text-gray-600
+    prose-table:bg-brand-white prose-table:shadow prose-table:rounded-md
+    prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4
+    prose-blockquote:border-accent prose-blockquote:bg-accent prose-blockquote:rounded prose-blockquote:shadow
+    prose-blockquote:px-10 prose-blockquote:py-2;
 }
 
 
@@ -40,13 +46,17 @@ body>footer {
 }
 
 .custom-shadow {
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+}
+
+.card-shadow {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     top: 0;
     transition: all 0.1s ease-in;
 }
 
-.custom-shadow:hover {
-        top: -2px;
-        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+.card-shadow:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
 }

@@ -5,7 +5,7 @@ pubDate: "2023-02-15"
 image: { src: "/images/city-grid.png", alt: "A picture of a coder" }
 category: "Architecture"
 ---
-import BlogPostImage from "@components/BlogPostImage.astro"
+import { Picture } from "@astrojs/image/components";
 
 “What’s the meaning of life?” is a cliche philosophical question, but it touches on something fundamental about how humans relate to the world around them. People want to know that there’s significance to their lives, but not necessarily in any grandiose sense. Most of us just want to feel that there’s value in getting up and being active each day. We search for signs that our existence is a net good in the world, even if only on a minuscule scale in the grander scheme of the universe.
 
@@ -14,7 +14,13 @@ In the past, researchers have identified [three important constructs](https://pu
 However, new evidence is revealing an overlooked construct, and it may be the most crucial one of all. Researchers are calling it “experiential appreciation”, and it refers to enjoying and appreciating sensations as you experience them — a concept that you may already recognize if you’re familiar with mindfulness.
 
 
-<BlogPostImage src="/images/post/sun.webp" alt="man dancing on sunrise" />
+<Picture
+        src="/images/post/sun.webp"
+        alt="man dancing on sunrise"
+        widths={[200, 400, 800]}
+        aspectRatio="16:9"
+        sizes="(max-width: 800px) 100vw, 800px"
+/>
 
 ## The fourth construct of meaning in life
 

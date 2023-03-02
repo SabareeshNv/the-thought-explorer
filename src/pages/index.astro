@@ -17,7 +17,7 @@ const description = SITE_DESCRIPTION;
 	<main class="layout py-8">
 		{formattedBlogPosts.map((post) => <FeaturedBlogCard post={post} />)[0]}
 
-		<div class="grid gap-8 mt-8 card-container">
+		<div class="grid gap-8 mt-8 lg:mt-12 card-container">
 			{
 				formattedBlogPosts
 					.slice(1)

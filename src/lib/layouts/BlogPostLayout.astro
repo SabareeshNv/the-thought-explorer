@@ -12,22 +12,22 @@ const description = "This is the description";
 <BaseLayout title={title} description={description}>
     <main class="py-8 space-y-6">
         <section class="layout">
-            <div class="max-w-3xl mx-auto text-center space-y-4">
+            <div class="max-w-3xl mx-auto text-center space-y-4 lg:space-y-5">
                 <span
-                    class="text-md text-purple-900 font-medium uppercase tracking-wider"
+                    class="text-md text-red-900 hover:text-red-700 font-medium uppercase tracking-wider"
                 >
                     <a href={`/category/${slugify(category)}`}>{category}</a
                     ></span
                 >
                 <h1
-                    class="font-heading font-semibold text-2xl md:text-3xl lg:text-4xl"
+                    class="font-heading font-semibold leading-tight tracking-tight text-2xl md:text-3xl lg:text-4xl"
                 >
                     {title}
                 </h1>
 
                 <FormattedDate
                     date={pubDate}
-                    class="text-gray-900 font-light tracking-wide block"
+                    class="text-gray-900 tracking-wide block text-md"
                 />
             </div>
         </section>
