@@ -8,6 +8,7 @@ module.exports = {
 			fontFamily: {
 				sans: ["Inter", ...defaultTheme.fontFamily.sans],
 				heading: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
+				bitter: ['Bitter', 'serif'],
 			},
 			colors: {
 				'accent': "#CCE6D0",

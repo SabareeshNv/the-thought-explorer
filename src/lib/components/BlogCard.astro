@@ -7,7 +7,7 @@ const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<article class="flex flex-col custom-shadow rounded bg-white">
+<article class="flex flex-col card-shadow rounded bg-white">
     <a href={`/blog/${post.slug}/`}>
         <Picture
             src={image.src}
@@ -32,7 +32,7 @@ const { title, summary, pubDate, category, image } = post.data;
             />
         </div>
 
-        <h2 class="text-xl font-medium font-heading leading-tight">
+        <h2 class="text-xl font-semibold font-bitter leading-tight">
             <a href={`/blog/${post.slug}/`}>{title}</a>
         </h2>
 
