@@ -1,23 +1,22 @@
 html,
 body {
-    height: 100%;
+  height: 100%;
 }
 
-
-body>footer {
-    position: sticky;
-    top: 100vh;
+body > footer {
+  position: sticky;
+  top: 100vh;
 }
 
 .layout {
-    max-width: 1280px;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+  max-width: 1280px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .typography {
-    @apply prose md:prose-lg 2xl:prose-xl 
+  @apply prose md:prose-lg 2xl:prose-xl mx-auto
     prose-headings:leading-tight prose-headings:font-heading
     prose-li:marker:text-gray-600
     prose-table:bg-brand-white prose-table:shadow prose-table:rounded-md
@@ -26,37 +25,31 @@ body>footer {
     prose-blockquote:px-10 prose-blockquote:py-2;
 }
 
-
-
 .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
 }
 
-
 .full-bleed {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 @media (min-width: 768px) {
-.full-bleed {
+  .full-bleed {
     width: unset;
     margin-left: unset;
-    }
+  }
 }
 
 .custom-shadow {
-    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.1);
 }
 
-.card-shadow {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 0;
-    transition: all 0.1s ease-in;
-}
-
-.card-shadow:hover {
-    top: -2px;
-    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+.heading::after {
+  content: "";
+  display: block;
+  margin-top: 0.5em;
+  width: 30px;
+  height: 5px;
+  background-color: black;
 }

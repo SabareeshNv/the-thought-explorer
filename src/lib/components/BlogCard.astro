@@ -7,37 +7,36 @@ const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<article class="flex flex-col card-shadow rounded bg-white">
-    <a href={`/blog/${post.slug}/`}>
-        <Picture
-            src={image.src}
-            alt={image.alt}
-            widths={[200, 400, 800]}
-            sizes="(max-width: 800px) 100vw, 800px"
-            aspectRatio="16:9"
-            class="rounded-t"
-        />
-    </a>
+<article class="flex flex-col">
+  <a href={`/blog/${post.slug}/`}>
+    <Picture
+      src={image.src}
+      alt={image.alt}
+      widths={[200, 400, 800]}
+      sizes="(max-width: 800px) 100vw, 800px"
+      aspectRatio="16:9"
+      class="rounded"
+    />
+  </a>
 
-    <div class="p-4 space-y-4">
-        <div class="flex flex-wrap items-center justify-between">
-            <a
-                href={`/category/${slugify(category)}`}
-                class="text-sm tracking-wider font-medium text-red-900 hover:text-red-700 uppercase"
-                >{category}</a
-            >
-            <FormattedDate
-                date={pubDate}
-                class="text-sm font-light tracking-wider"
-            />
-        </div>
-
-        <h2 class="text-xl font-semibold font-bitter leading-tight">
-            <a href={`/blog/${post.slug}/`}>{title}</a>
-        </h2>
-
-        <div class="font-light">
-            {summary}
-        </div>
+  <div class="p-6 bg-white">
+    <div class="flex flex-wrap items-center justify-between">
+      <a
+        href={`/category/${slugify(category)}`}
+        class="text-sm tracking-wider font-medium text-red-900 hover:text-red-700 uppercase"
+        >{category}</a
+      >
     </div>
+
+    <h2
+      class="text-xl lg:text-2xl heading font-semibold font-heading leading-tight mt-3 mb-4"
+    >
+      <a href={`/blog/${post.slug}/`}>{title}</a>
+    </h2>
+    <div class="line-clamp-3 grow">
+      {summary}
+    </div>
+
+    <FormattedDate date={pubDate} class="text-sm font-light mt-8 block" />
+  </div>
 </article>

@@ -5,24 +5,22 @@ import { getCollection } from "astro:content";
 import { formatBlogPosts, slugify } from "@utils/helpers";
 
 export async function getStaticPaths() {
-    const allBlogPosts = await getCollection("blog");
-    const formattedBlogPosts = formatBlogPosts(allBlogPosts);
+  const allBlogPosts = await getCollection("blog");
+  const formattedBlogPosts = formatBlogPosts(allBlogPosts);
 
-    const uniqueCategory = [
-        ...new Set(
-            formattedBlogPosts.map((post) => slugify(post.data.category))
-        ),
-    ];
+  const uniqueCategory = [
+    ...new Set(formattedBlogPosts.map((post) => slugify(post.data.category))),
+  ];
 
-    return uniqueCategory.map((category) => {
-        const filteredPosts = formattedBlogPosts.filter((post) =>
-            slugify(post.data.category).includes(category)
-        );
-        return {
-            params: { category },
-            props: { posts: filteredPosts },
-        };
-    });
+  return uniqueCategory.map((category) => {
+    const filteredPosts = formattedBlogPosts.filter((post) =>
+      slugify(post.data.category).includes(category)
+    );
+    return {
+      params: { category },
+      props: { posts: filteredPosts },
+    };
+  });
 }
 
 const { category } = Astro.params;
@@ -33,17 +31,17 @@ const description = `Posts categorised under ${category}`;
 ---
 
 <BaseLayout title={title} description={description}>
-    <div class="layout py-8">
-        <h1 class="text-2xl">
-            View the latests posts on
-            <span
-                class="text-red-900 tracking-tight italic underline underline-offset-4"
-                >{category}</span
-            >
-        </h1>
+  <div class="layout py-8">
+    <h1 class="text-2xl">
+      View the latests posts on
+      <span
+        class="text-red-900 tracking-tight italic underline underline-offset-4"
+        >{category}</span
+      >
+    </h1>
 
-        <div class="mt-8 grid gap-8 card-container">
-            {posts.map((post) => <BlogCard post={post} />)}
-        </div>
+    <div class="grid md:grid-cols-2 gap-8 mt-8 md:mt-12">
+      {posts.map((post) => <BlogCard post={post} />)}
     </div>
+  </div>
 </BaseLayout>

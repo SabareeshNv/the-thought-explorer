@@ -8,39 +8,51 @@ const { title, summary, pubDate, category, image } = post.data;
 ---
 
 <article
-    class="grid md:grid-cols-3 lg:gap-1 bg-white custom-shadow rounded-t md:rounded-l md:rounded-tr-none"
+  class="bg-white grid md:grid-cols-3 rounded-t md:rounded-l md:rounded-tr-none"
 >
-    <div class="md:col-span-2">
-        <a href={`/blog/${post.slug}/`}>
-            <Picture
-                src={image.src}
-                alt={image.alt}
-                widths={[200, 400, 800, 1200]}
-                sizes="(max-width: 800px) 100vw, 1200px"
-                aspectRatio="2:1"
-                class="h-full rounded-t md:rounded-l md:rounded-tr-none"
-            />
-        </a>
-    </div>
+  <div class="md:col-span-2">
+    <a href={`/blog/${post.slug}/`}>
+      <Picture
+        src={image.src}
+        alt={image.alt}
+        widths={[200, 400, 800, 1200]}
+        sizes="(max-width: 800px) 100vw, 1200px"
+        aspectRatio="2:1"
+        class="h-full rounded-t md:rounded-l md:rounded-tr-none"
+      />
+    </a>
+  </div>
 
-    <div class="p-4 space-y-4">
-        <div class="flex flex-wrap items-center justify-between">
-            <a
-                href={`/category/${slugify(category)}`}
-                class="text-sm tracking-wider font-medium text-red-900 hover:text-red-700 uppercase"
-                >{category}</a
-            >
+  <div class="space-y-4 p-6">
+    <div class="flex flex-wrap items-center justify-between">
+      <a
+        href={`/category/${slugify(category)}`}
+        class="text-sm tracking-wider font-medium text-red-900 hover:text-red-700 uppercase"
+        >{category}</a
+      >
+      <div class="flex items-center space-x-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-5 h-5"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
 
-            <FormattedDate
-                date={pubDate}
-                class="text-sm font-light tracking-wider"
-            />
-        </div>
-        <h2 class="text-xl font-semibold font-heading leading-tight">
-            <a href={`/blog/${post.slug}/`}>{title}</a>
-        </h2>
-        <div class="font-light">
-            {summary}
-        </div>
+        <FormattedDate date={pubDate} class="text-sm font-light" />
+      </div>
     </div>
+    <h2 class="text-xl font-semibold font-heading leading-tight heading">
+      <a href={`/blog/${post.slug}/`}>{title}</a>
+    </h2>
+    <div class="font-light line-clamp-4">
+      {summary}
+    </div>
+  </div>
 </article>
