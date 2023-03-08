@@ -2,12 +2,13 @@
 import { Image, Picture } from "@astrojs/image/components";
 import { slugify } from "@utils/helpers";
 import FormattedDate from "./FormattedDate.astro";
+import StyledDate from "./StyledDate.astro";
 
 const { post } = Astro.props;
 const { title, summary, pubDate, category, image } = post.data;
 ---
 
-<article class="flex flex-col">
+<article class="flex flex-col bg-brand-white rounded">
   <a href={`/blog/${post.slug}/`}>
     <Picture
       src={image.src}
@@ -15,28 +16,43 @@ const { title, summary, pubDate, category, image } = post.data;
       widths={[200, 400, 800]}
       sizes="(max-width: 800px) 100vw, 800px"
       aspectRatio="16:9"
-      class="rounded"
+      class="rounded-t"
     />
   </a>
 
-  <div class="p-6 bg-white">
-    <div class="flex flex-wrap items-center justify-between">
-      <a
-        href={`/category/${slugify(category)}`}
-        class="text-sm tracking-wider font-medium text-red-900 hover:text-red-700 uppercase"
-        >{category}</a
-      >
-    </div>
-
-    <h2
-      class="text-xl lg:text-2xl heading font-semibold font-heading leading-tight mt-3 mb-4"
+  <div class="p-4 flex flex-wrap items-center justify-between">
+    <a
+      href={`/category/${slugify(category)}`}
+      class="text-sm tracking-wider font-medium text-red-900 hover:text-red-700 uppercase"
+      >{category}</a
     >
-      <a href={`/blog/${post.slug}/`}>{title}</a>
-    </h2>
-    <div class="line-clamp-3 grow">
-      {summary}
-    </div>
-
-    <FormattedDate date={pubDate} class="text-sm font-light mt-8 block" />
   </div>
+
+  <h2
+    class="text-xl lg:text-2xl heading font-semibold font-heading leading-tight px-4"
+  >
+    <a href={`/blog/${post.slug}/`}>{title}</a>
+  </h2>
+  <div class="p-4">
+    {summary}
+  </div>
+
+  <div class="flex items-center space-x-1 px-4 py-2 mt-auto">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-5 h-5"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+    </svg>
+
+    <FormattedDate date={pubDate} class="text-sm font-light" />
+  </div>
+  <!-- <FormattedDate date={pubDate} class="font-light p-4 mt-auto block" /> -->
 </article>

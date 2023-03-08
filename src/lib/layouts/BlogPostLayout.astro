@@ -10,36 +10,34 @@ const description = "This is the description";
 ---
 
 <BaseLayout title={title} description={description}>
-  <main class="py-12 layout">
-    <div class="grid md:grid-cols-4 gap-6">
-      <div class="md:col-span-3 bg-white">
-        <div class="p-6">
-          <span
-            class="text-md text-purple-900 hover:text-purple-700 font-medium uppercase tracking-wider"
-          >
-            <a href={`/category/${slugify(category)}`}>{category}</a></span
-          >
-          <h1
-            class="my-6 font-heading font-semibold leading-tight text-2xl md:text-3xl lg:text-4xl"
-          >
-            {title}
-          </h1>
-          <FormattedDate
-            date={pubDate}
-            class="text-gray-900 tracking-wide block text-md"
-          />
-        </div>
+  <main class="layout">
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <span
+          class="text-md text-purple-900 hover:text-purple-700 font-medium uppercase tracking-wider"
+        >
+          <a href={`/category/${slugify(category)}`}>{category}</a></span
+        >
+        <h1
+          class="my-6 font-heading font-semibold leading-tight text-2xl md:text-3xl lg:text-4xl"
+        >
+          {title}
+        </h1>
+        <FormattedDate
+          date={pubDate}
+          class="text-gray-900 tracking-wide block text-md"
+        />
 
         <Picture
           src={image.src}
           alt={image.alt}
           widths={[200, 400, 800, 1000]}
-          sizes="(max-width: 800px) 100vw, 1000px"
+          sizes="(max-width: 800px) 100vw, 800px"
           aspectRatio="16:9"
-          class="w-full"
+          class="rounded my-4"
         />
 
-        <article class="typography px-6">
+        <article class="typography">
           <slot />
         </article>
       </div>

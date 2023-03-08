@@ -48,7 +48,9 @@ const { title, summary, pubDate, category, image } = post.data;
         <FormattedDate date={pubDate} class="text-sm font-light" />
       </div>
     </div>
-    <h2 class="text-xl font-semibold font-heading leading-tight heading">
+    <h2
+      class="text-xl lg:text-2xl font-semibold font-heading leading-tight heading"
+    >
       <a href={`/blog/${post.slug}/`}>{title}</a>
     </h2>
     <div class="font-light line-clamp-4">
