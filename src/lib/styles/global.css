@@ -16,7 +16,7 @@ body > footer {
 }
 
 .typography {
-  @apply prose md:prose-lg 2xl:prose-xl mx-auto
+  @apply prose md:prose-lg 2xl:prose-xl
     prose-headings:leading-tight prose-headings:font-heading
     prose-li:marker:text-gray-600
     prose-table:bg-brand-white prose-table:shadow prose-table:rounded-md
@@ -50,6 +50,6 @@ body > footer {
   display: block;
   margin-top: 0.5em;
   width: 10%;
-  height: 5px;
-  background-color: black;
+  height: 3px;
+  background-color: #212121;
 }

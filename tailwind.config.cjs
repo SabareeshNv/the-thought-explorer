@@ -7,12 +7,13 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
-        heading: ["Bitter", ...defaultTheme.fontFamily.serif],
+        heading: ["Neuton", ...defaultTheme.fontFamily.serif],
       },
       colors: {
         accent: "#CCE6D0",
-        "brand-white": "#FCFAFF",
+        "brand-white": "#fdfdfd",
         "brand-black": "#2B2B2B",
+        "brand-gray": "#212121",
       },
     },
   },
