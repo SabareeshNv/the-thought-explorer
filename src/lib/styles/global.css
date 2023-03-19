@@ -20,25 +20,13 @@ body > footer {
     prose-headings:leading-tight prose-headings:font-heading
     prose-li:marker:text-gray-600
     prose-table:bg-brand-white prose-table:shadow prose-table:rounded-md
-    prose-th:bg-gray-800 prose-th:text-gray-200 prose-th:p-4 prose-td:p-4
-    prose-blockquote:border-accent prose-blockquote:bg-accent prose-blockquote:rounded prose-blockquote:shadow
+    prose-th:bg-brand-gray prose-th:text-brand-white prose-th:font-sans prose-th:p-4 prose-td:p-4
+    prose-blockquote:border-brand-gray prose-blockquote:bg-gray-100
     prose-blockquote:px-10 prose-blockquote:py-2;
 }
 
 .card-container {
   grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-}
-
-.full-bleed {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-}
-
-@media (min-width: 768px) {
-  .full-bleed {
-    width: unset;
-    margin-left: unset;
-  }
 }
 
 .custom-shadow {
