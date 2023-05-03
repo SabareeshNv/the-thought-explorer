@@ -11,32 +11,34 @@ const description = "This is the description";
 
 <BaseLayout title={title} description={description}>
   <main class="layout">
-    <span
-      class="text-md text-purple-900 hover:text-purple-700 hover:underline font-medium uppercase tracking-wider"
-    >
-      <a href={`/category/${slugify(category)}`}>{category}</a></span
-    >
-    <h1
-      class="font-heading font-medium leading-tight heading text-3xl md:text-4xl lg:text-5xl mt-2"
-    >
-      {title}
-    </h1>
-    <FormattedDate
-      date={pubDate}
-      class="text-gray-900 tracking-wide block text-md mt-4"
-    />
+    <div class="max-w-4xl mx-auto">
+      <span
+        class="text-md text-purple-900 hover:text-purple-700 hover:underline font-medium uppercase tracking-wider"
+      >
+        <a href={`/category/${slugify(category)}`}>{category}</a></span
+      >
+      <h1
+        class="font-heading font-medium leading-tight heading text-3xl md:text-4xl lg:text-5xl mt-2"
+      >
+        {title}
+      </h1>
+      <FormattedDate
+        date={pubDate}
+        class="text-gray-900 tracking-wide block text-md mt-4"
+      />
 
-    <Picture
-      src={image.src}
-      alt={image.alt}
-      widths={[200, 400, 800, 1000]}
-      sizes="(max-width: 800px) 100vw, 800px"
-      aspectRatio="16:9"
-      class="rounded mt-6"
-    />
+      <Picture
+        src={image.src}
+        alt={image.alt}
+        widths={[200, 400, 800, 1000]}
+        sizes="(max-width: 800px) 100vw, 800px"
+        aspectRatio="16:9"
+        class="rounded-md shadow-md mt-6"
+      />
 
-    <article class="typography">
-      <slot />
-    </article>
+      <article class="typography">
+        <slot />
+      </article>
+    </div>
   </main>
 </BaseLayout>
