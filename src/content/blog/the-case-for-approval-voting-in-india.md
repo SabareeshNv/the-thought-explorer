@@ -18,4 +18,11 @@ In the 2019 election, the AAP contested in the Delhi region but failed to win a 
 
 In a scenario where approval voting was used, voters could have expressed their support for both the BJP and the AAP. This would have given the AAP a chance to secure seats in the Lok Sabha, even if it did not win the majority of votes in any given constituency. In this scenario, the AAP could have used its representation in the Lok Sabha to build a stronger national presence and appeal to a wider range of voters.
 
+In Kerala
+
+| Party     | Seat Won | Percentage Won |
+| --------- | -------- | -------------- |
+| INC       | 15       | 37.5           |
+
+
 In conclusion, approval voting has the potential to be an effective voting method in a multi-party democracy like India. By allowing voters to express their support for multiple parties, it can help smaller parties make a meaningful election run and increase the representation of diverse political views in the national legislature. The outcome of the 2014 and 2019 Lok Sabha elections suggest that approval voting could have provided a path for an underdog political party, like the AAP, to have made a stronger election run and secure representation in the Parliament.
