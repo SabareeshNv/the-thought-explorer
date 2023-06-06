@@ -3,7 +3,7 @@ body {
   height: 100%;
 }
 
-body > footer {
+body>footer {
   position: sticky;
   top: 100vh;
 }
@@ -16,13 +16,7 @@ body > footer {
 }
 
 .typography {
-  @apply prose md:prose-lg 2xl:prose-xl
-    prose-headings:leading-tight prose-headings:font-heading
-    prose-li:marker:text-gray-600
-    prose-table:bg-brand-white prose-table:shadow prose-table:rounded-md
-    prose-th:bg-brand-gray prose-th:text-brand-white prose-th:font-sans prose-th:p-4 prose-td:p-4
-    prose-blockquote:border-brand-gray prose-blockquote:bg-gray-100
-    prose-blockquote:px-10 prose-blockquote:py-2;
+  @apply prose md:prose-lg 2xl:prose-xl prose-headings:leading-tight prose-headings:font-heading prose-li:marker:text-gray-600 prose-table:bg-brand-white prose-table:shadow prose-table:rounded-md prose-th:bg-brand-gray prose-th:text-brand-white prose-th:font-sans prose-th:p-4 prose-td:p-4 prose-blockquote:border-brand-gray prose-blockquote:bg-gray-100 prose-blockquote:px-10 prose-blockquote:py-2;
 }
 
 .card-container {
@@ -37,7 +31,7 @@ body > footer {
   content: "";
   display: block;
   margin-top: 0.5em;
-  width: 10%;
+  width: clamp(2em, 25%, 3em);
   height: 3px;
   background-color: #212121;
 }
