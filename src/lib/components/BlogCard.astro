@@ -21,11 +21,13 @@ const { title, summary, pubDate, category, image } = post.data;
 
   <a
     href={`/category/${slugify(category)}`}
-    class="text-sm tracking-wider font-bold text-purple-900 hover:text-purple-700 uppercase py-3"
+    class="text-sm tracking-wider font-bold text-purple-900 hover:text-purple-950 uppercase mt-4 my-2"
     >{category}</a
   >
 
-  <h2 class="text-2xl lg:text-3xl font-medium font-heading pb-6 heading">
+  <h2
+    class="text-2xl lg:text-3xl font-medium font-heading leading-3 pb-6 heading"
+  >
     <a href={`/blog/${post.slug}/`}>{title}</a>
   </h2>
   <div>
@@ -48,6 +50,6 @@ const { title, summary, pubDate, category, image } = post.data;
       ></path>
     </svg>
 
-    <FormattedDate date={pubDate} class="text-sm" />
+    <FormattedDate date={pubDate} class="text-sm font-light" />
   </div>
 </article>

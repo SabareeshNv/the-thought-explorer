@@ -12,15 +12,15 @@ const description = "This is the description";
 <BaseLayout title={title} description={description}>
   <main class="layout">
     <div class="max-w-4xl mx-auto">
-      <span class="shadow-sm bg-green-700 px-3 py-2 rounded-md">
+      <span>
         <a
           href={`/category/${slugify(category)}`}
-          class="text-sm tracking-wide font-bold uppercase text-gray-100"
+          class="text-sm tracking-wide font-bold uppercase text-purple-800 hover:text-purple-900"
           >{category}</a
         ></span
       >
       <h1
-        class="font-heading font-medium leading-tight text-3xl md:text-4xl lg:text-5xl mt-6"
+        class="font-heading font-medium leading-tight text-3xl md:text-4xl lg:text-5xl mt-4"
       >
         {title}
       </h1>

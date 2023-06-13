@@ -38,8 +38,11 @@ const description = `Posts categorised under ${category}`;
         >' {category} '</span
       >
     </h1>
-
+    <!-- 
     <div class="grid md:grid-cols-2 gap-8 mt-8 md:mt-12">
+      {posts.map((post) => <BlogCard post={post} />)}
+    </div> -->
+    <div class="grid gap-8 mt-8 md:mt-12 card-container">
       {posts.map((post) => <BlogCard post={post} />)}
     </div>
   </div>
