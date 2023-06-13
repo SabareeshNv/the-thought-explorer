@@ -3,7 +3,7 @@ title: "Building infra like there is no tomorrow!"
 summary: "An all too simple summary"
 pubDate: "2023-06-12"
 image: {src: "/images/post/mumbai.webp", alt: "beautiful picture of mumbai"}
-category: "City Planing"
+category: "Urban Planning"
 ---
 
 Simply understood, brand architecture is the art and science of structuring the portfolio to meet your strategic goals, defining the brand number, scope, and relationships needed to compete. Just as Modern Architecture prioritized function, a Brand Architecture is only as good as it is well-suited for the purpose it strives to achieve. Given the disruption observed today across industries and segments, it’s no wonder that companies are considering structural rather than topical solutions to the challenges they face.
