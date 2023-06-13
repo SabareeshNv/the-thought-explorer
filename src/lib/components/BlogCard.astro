@@ -21,12 +21,12 @@ const { title, summary, pubDate, category, image } = post.data;
 
   <a
     href={`/category/${slugify(category)}`}
-    class="text-sm tracking-wider font-bold text-purple-900 hover:text-purple-950 uppercase mt-4 my-2"
+    class="text-sm tracking-wider font-bold text-purple-900 hover:text-purple-950 uppercase my-4"
     >{category}</a
   >
 
   <h2
-    class="text-xl lg:text-2xl font-medium font-heading leading-none pb-6 heading"
+    class="text-2xl lg:text-3xl font-medium font-heading leading-none mb-6 heading"
   >
     <a href={`/blog/${post.slug}/`}>{title}</a>
   </h2>
