@@ -1,4 +1,6 @@
 ---
+import "@fontsource/fondamento";
+
 const nav = [
   { text: "Home", link: "/" },
   { text: "Blog", link: "/blog" },
@@ -7,9 +9,9 @@ const nav = [
 ];
 ---
 
-<header class="py-6 mb-6 lg:mb-8 bg-brand-gray text-brand-white">
+<header class="py-4 lg:py-6 mb-6 lg:mb-8 bg-brand-gray text-brand-white">
   <div class="layout flex flex-wrap justify-between items-center">
-    <a href="/" class="font-heading text-2xl font-semibold"
+    <a href="/" class="font-fondo text-2xl font-bold tracking-wide"
       >The Thought Explorer</a
     >
     <div id="toggle" class="md:hidden cursor-pointer text-xl">&#9776;</div>
@@ -18,7 +20,7 @@ const nav = [
         {
           nav.map((item) => (
             <li class="py-4 md:py-0 md:px-6">
-              <a href={item.link} class="font-medium hover:text-gray-200 block">
+              <a href={item.link} class="font-medium hover:text-red-400 block">
                 {item.text}
               </a>
             </li>

@@ -8,6 +8,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
         heading: ["Neuton", ...defaultTheme.fontFamily.serif],
+        fondo: ['Fondamento', 'cursive'],
       },
       colors: {
         accent: "#CCE6D0",
