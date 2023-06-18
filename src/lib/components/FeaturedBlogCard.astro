@@ -17,6 +17,7 @@ const { title, summary, pubDate, category, image } = post.data;
         alt={image.alt}
         width="815"
         height="400"
+        fetchpriority="high"
         class="rounded-md shadow-md object-cover"
       />
     </a>
@@ -53,7 +54,7 @@ const { title, summary, pubDate, category, image } = post.data;
     >
       <a href={`/blog/${post.slug}/`}>{title}</a>
     </h2>
-    <div>
+    <div class="font-light tracking-wide">
       {summary}
     </div>
   </div>

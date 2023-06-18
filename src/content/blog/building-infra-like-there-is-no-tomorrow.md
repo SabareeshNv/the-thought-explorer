@@ -1,6 +1,6 @@
 ---
 title: "Building infra like there is no tomorrow!"
-summary: "An all too simple summary"
+summary: "One of the immediately observable identifiers of a region’s economic status is the quality of its infrastructure. As a driver of economic growth, infrastructure spending is emphasised by Governments all over the world as a lever for employment and enhanced socio-economic development."
 pubDate: "2023-06-12"
 image: {src: "/images/post/mumbai.webp", alt: "beautiful picture of mumbai"}
 category: "Urban Planning"
